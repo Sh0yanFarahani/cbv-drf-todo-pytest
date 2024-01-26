@@ -16,10 +16,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
-class TaskList(ListView):
+class TaskList(LoginRequiredMixin, ListView):
     model = Task
 
-class TaskCreate(CreateView):
+class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
     fields = ['name',]   
     success_url = reverse_lazy('task:task-list')  
@@ -39,12 +39,12 @@ class TaskDelete(LoginRequiredMixin, DeleteView):
     def get_queryset(self):
         return self.model.objects.all()
 
-class TaskUpdate(UpdateView):
+class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     fields = ['name']
     success_url = reverse_lazy('task:task-list')
 
-class TaskComplate(UpdateView):
+class TaskComplate(LoginRequiredMixin, UpdateView):
     model = Task
     fields = ['done']
 
@@ -53,5 +53,6 @@ class TaskComplate(UpdateView):
         object.done = True
         object.save()
         return HttpResponseRedirect('/')
+
 
 
