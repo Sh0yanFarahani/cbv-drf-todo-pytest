@@ -44,7 +44,7 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
     fields = ['name']
     success_url = reverse_lazy('task:task-list')
 
-class TaskComplate(LoginRequiredMixin, UpdateView):
+class TaskComplete(LoginRequiredMixin, UpdateView):
     model = Task
     fields = ['done']
 
