@@ -1,6 +1,6 @@
 from typing import Any
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 
 
@@ -14,12 +14,16 @@ from .models import Task
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-# Create your views here.
+# template render ------
 
 class TaskList(LoginRequiredMixin, ListView):
+    ''' for To display tasks '''
+
     model = Task
 
 class TaskCreate(LoginRequiredMixin, CreateView):
+    ''' To make tasks '''
+
     model = Task
     fields = ['name',]   
     success_url = reverse_lazy('task:task-list')  
@@ -29,6 +33,8 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         return super(TaskCreate, self).form_valid(form)
 
 class TaskDelete(LoginRequiredMixin, DeleteView):
+    ''' to remove tasks in database '''
+
     model = Task
     success_url = reverse_lazy('task:task-list')  
 
@@ -40,11 +46,13 @@ class TaskDelete(LoginRequiredMixin, DeleteView):
         return self.model.objects.all()
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
+    ''' to update task names '''
     model = Task
     fields = ['name']
     success_url = reverse_lazy('task:task-list')
 
 class TaskComplete(LoginRequiredMixin, UpdateView):
+    
     model = Task
     fields = ['done']
 
@@ -55,4 +63,7 @@ class TaskComplete(LoginRequiredMixin, UpdateView):
         return HttpResponseRedirect('/')
 
 
+# api --------
 
+class TaskListApi(TemplateView):
+    template_name = "api/index.html"

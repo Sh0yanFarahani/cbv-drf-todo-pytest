@@ -5,7 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 
 class TaskViewSet(viewsets.ModelViewSet):
     """
-    A simple ViewSet for viewing and editing accounts.
+    for build view api in todo app
     """
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
