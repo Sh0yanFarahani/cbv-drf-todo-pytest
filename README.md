@@ -55,7 +55,6 @@ I would like to work with them more in this project .
 
 _To work with the project you must install the following packages_
 
-1. Get a free API Key at [https://example.com](https://example.com)
 2. install django
    ```sh
     pip install django
