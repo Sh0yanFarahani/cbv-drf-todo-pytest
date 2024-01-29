@@ -5,13 +5,13 @@ from . import views
 app_name = 'task'
 
 urlpatterns = [
-    path('/api', views.TaskListApi.as_view(), name='task-list-api'),
+    path('api', views.TaskListApi.as_view(), name='task-list-api'),
     path('', views.TaskList.as_view(), name='task-list'),
     path('task/add', views.TaskCreate.as_view(), name='create-task'),
     path('update/<int:pk>', views.TaskUpdate.as_view(), name='task-update'),
     path('delete/<int:pk>', views.TaskDelete.as_view(), name='delete-task'),
     path('complete/<int:pk>', views.TaskComplete.as_view(), name='task-complete'),
-    path('task/api/v1/', include('todo.api.v1.urls')),
+    path('todo/api/v1/', include('todo.api.v1.urls')),
 
 # 
 ]
