@@ -45,9 +45,13 @@ I wanted to test myself in this project, and most of the project was for me, I t
 
 I would like to work with them more in this project .
 
-<p>django</p>
-<p>restframework</p>
-<p>pytest</p>
+* <img src="https://camo.githubusercontent.com/c96cb99431280ee1fdce3fe6b5338c5aca7bcaf94331b7426803ac9b426f6cef/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f646a616e676f2e737667" alt="Logo" width="50" height="40"> 
+
+* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Logo" width="40" height="">
+
+* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="Logo" width="40" height="">
+
+* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="Logo" width="40" height="">
 
 
 
