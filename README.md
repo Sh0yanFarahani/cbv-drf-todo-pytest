@@ -95,7 +95,7 @@ _To work with the project you must install the following packages_
 پ
 ## Contact
 
-Your Name - shayan - shayanpars230@gmail.com
+shayan - shayanpars230@gmail.com
 
 Project Link: [[https://github.com/Sh0yanFarahani/cbv-drf-todo-pytest/](https://github.com/Sh0yanFarahani/cbv-drf-todo-pytest/)]
 <br/>
