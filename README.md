@@ -1,6 +1,8 @@
 <br />
 <div align="center">
-
+    <a href="/">
+<img src="https://camo.githubusercontent.com/c96cb99431280ee1fdce3fe6b5338c5aca7bcaf94331b7426803ac9b426f6cef/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f646a616e676f2e737667" alt="Logo" width="80" height="80">
+    </a>
   <h3 align="center">django project</h3>
 
   <p align="center">
